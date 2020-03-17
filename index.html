@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="./Observer.js"></script>
+<script src="./MVue.js"></script>
+
+<body>
+    <div class="" id="app">
+        <h2>{{person.name}} --{{person.age}}</h2>
+        <h3>{{person.fav}}</h3>
+        <ul>
+            <li v-text='msg'>1</li>
+            <li v-text='person.name'>2</li>
+            <li v-html='person.fav'>3</li>
+        </ul>
+        <input type="text" v-model='msg'>
+        <h3>{{msg}}</h3>
+    </div>
+    <script>
+        var vm = new MVue({
+            el: '#app',
+            data: {
+                person: {
+                    name: 'zhsg',
+                    age: 23,
+                    fav: 'study'
+                },
+                msg: "lubenweiniubi"
+            }
+        })
+    </script>
+</body>
+
+</html>
